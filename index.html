@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b1a">
+  <title>Cosmos Quiz — ¿Cuánto sabes del espacio?</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="quiz-card">
+    <header class="header">
+      <div class="brand"><span class="brand-icon" aria-hidden="true">✦</span> COSMOS QUIZ</div>
+      <span class="round-label">TRIVIA ESPACIAL</span>
+    </header>
+
+    <section class="intro" id="intro">
+      <div class="planet" aria-hidden="true">🪐</div>
+      <p class="eyebrow">UNA AVENTURA POR EL UNIVERSO</p>
+      <h1>¿Cuánto sabes<br>del <span>espacio?</span></h1>
+      <p class="description">Pon a prueba tu curiosidad con preguntas sobre planetas, estrellas y los misterios del cosmos.</p>
+      <button class="primary-button" id="start-button" type="button">¡Empezar misión! <span aria-hidden="true">→</span></button>
+      <p class="fine-print">8 preguntas <span aria-hidden="true">·</span> 1 oportunidad por pregunta</p>
+    </section>
+
+    <section class="game hidden" id="game" aria-live="polite">
+      <div class="game-meta">
+        <span id="question-count">PREGUNTA 1 DE 8</span>
+        <span class="score-label">PUNTOS <strong id="score">0</strong></span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Progreso del cuestionario" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p class="category" id="category"></p>
+      <h2 class="question" id="question"></h2>
+      <div class="answers" id="answers"></div>
+      <p class="feedback" id="feedback" aria-live="assertive"></p>
+      <button class="primary-button next-button hidden" id="next-button" type="button">Siguiente pregunta <span aria-hidden="true">→</span></button>
+    </section>
+
+    <section class="results hidden" id="results" aria-live="polite">
+      <div class="result-icon" id="result-icon" aria-hidden="true">🚀</div>
+      <p class="eyebrow">MISIÓN COMPLETADA</p>
+      <h2 id="result-title">¡Buen trabajo, astronauta!</h2>
+      <p class="result-score">Has conseguido <strong id="final-score">0</strong> de 8 puntos</p>
+      <p class="result-message" id="result-message"></p>
+      <button class="primary-button" id="restart-button" type="button">Jugar otra vez <span aria-hidden="true">↻</span></button>
+    </section>
+  </main>
+  <div class="stars stars-one" aria-hidden="true"></div>
+  <div class="stars stars-two" aria-hidden="true"></div>
+</body>
+</html>
